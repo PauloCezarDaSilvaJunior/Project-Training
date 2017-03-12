@@ -28,7 +28,7 @@ public class CidadeService {
 	@Path("{estado}")
 	public String listarPorEstado(@PathParam("estado") Long estado){
 		CidadeDAO cidadeDAO = new CidadeDAO();
-		List<Cidade> cidades = cidadeDAO.buscarPorEstado(estado);
+		List<Cidade> cidades = cidadeDAO.listar("nome");
 
 		Gson gson = new Gson();
 		String json = gson.toJson(cidades);

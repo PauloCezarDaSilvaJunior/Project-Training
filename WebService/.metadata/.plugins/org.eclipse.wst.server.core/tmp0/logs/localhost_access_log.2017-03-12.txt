@@ -31,3 +31,7 @@
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:15:29:30 -0300] "POST /Training/rest/usuario HTTP/1.1" 500 6423
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:15:33:57 -0300] "POST /Training/rest/usuario HTTP/1.1" 204 -
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:15:34:30 -0300] "GET /Training/rest/usuario HTTP/1.1" 200 206
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:35 -0300] "GET /Training/rest/usuario/0 HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:38 -0300] "GET /Training/rest/usuario/1 HTTP/1.1" 200 204
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:43 -0300] "GET /Training/rest/usuario/2 HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:46 -0300] "GET /Training/rest/usuario/1 HTTP/1.1" 200 204
