@@ -1,0 +1,5 @@
+package br.com.trainig.dao;
+
+public class MusculoDAO extends GenericDAO<Musculo>{
+
+}

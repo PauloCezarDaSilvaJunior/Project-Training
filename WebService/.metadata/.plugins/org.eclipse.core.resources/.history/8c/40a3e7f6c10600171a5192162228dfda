@@ -1,0 +1,37 @@
+package br.com.trainig.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "treinamento")
+public class Treinamento {
+
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private Exercicio exercicio;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private Aluno aluno;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private Professor professor;
+	
+	@ManyToOne
+	private OrdemTreino ordem;
+	
+	@Column
+	private String serie;
+	
+	@Column
+	private Double repetiaco;
+	
+	@Column
+	private Double carga;
+
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.service.ServiceRegistry"/>
+<fullyQualifiedTypeName name="javax.security.auth.login.Configuration"/>
+<fullyQualifiedTypeName name="javax.imageio.spi.ServiceRegistry"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Table"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.persistence.InheritanceType"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Usuario"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Musculo"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Aluno"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.GenericDomain"/>
+<fullyQualifiedTypeName name="java.lang.reflect.ParameterizedType"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Cidade"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Estado"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Exercicio"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.OrdemTreino"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Professor"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Treinamento"/>
+<fullyQualifiedTypeName name="br.com.trainig.dao.GenericDAO"/>
+<fullyQualifiedTypeName name="br.com.trainig.model.Equipamento"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,5 @@
+package br.com.trainig.service;
+
+public class EstadoService {
+
+}

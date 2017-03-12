@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="HibernateUtilTeste.conectarHibernate" project="TrainingWebService" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="conectarHibernate" classname="br.com.farmacia.util.HibernateUtilTeste" time="1.951"/>
+</testrun>
