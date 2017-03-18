@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.trainig.model.Usuario;
-
-public class UsuarioDAO extends GenericDAO<Usuario>{
-
-}

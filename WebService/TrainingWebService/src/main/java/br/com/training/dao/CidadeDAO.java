@@ -12,6 +12,7 @@ import br.com.training.util.HibernateUtil;
 
 public class CidadeDAO extends GenericDAO<Cidade>{
 	
+	@SuppressWarnings("unchecked")
 	public List<Cidade> buscarPorEstado(Long estadoCod){
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {

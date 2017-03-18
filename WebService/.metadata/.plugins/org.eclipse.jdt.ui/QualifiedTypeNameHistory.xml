@@ -27,4 +27,17 @@
 <fullyQualifiedTypeName name="br.com.trainig.model.Treinamento"/>
 <fullyQualifiedTypeName name="br.com.trainig.dao.GenericDAO"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.Equipamento"/>
+<fullyQualifiedTypeName name="br.com.training.util.HibernateUtil"/>
+<fullyQualifiedTypeName name="br.com.training.model.GenericDomain"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.server.ResourceConfig"/>
+<fullyQualifiedTypeName name="javax.ws.rs.ApplicationPath"/>
+<fullyQualifiedTypeName name="br.com.training.dao.UsuarioDAO"/>
+<fullyQualifiedTypeName name="br.com.training.model.Usuario"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+<fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="javax.persistence.criteria.Order"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
 </qualifiedTypeNameHistroy>

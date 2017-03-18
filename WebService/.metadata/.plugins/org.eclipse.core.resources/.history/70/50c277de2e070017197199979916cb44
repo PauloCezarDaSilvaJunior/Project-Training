@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.training.model.Aluno;
-
-public class AlunoDAO extends GenericDAO<Aluno>{
-
-}

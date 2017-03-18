@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.training.model.Professor;
-
-public class ProfessorDAO extends GenericDAO<Professor>{
-
-}

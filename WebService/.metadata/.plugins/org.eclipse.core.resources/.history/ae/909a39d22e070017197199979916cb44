@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.trainig.model.Cidade;
-
-public class CidadeDAO extends GenericDAO<Cidade>{
-
-}

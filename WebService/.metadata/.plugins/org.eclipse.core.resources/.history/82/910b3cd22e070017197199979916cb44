@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.trainig.model.Exercicio;
-
-public class ExercicioDAO extends GenericDAO<Exercicio>{
-
-}

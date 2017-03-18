@@ -1,6 +1,5 @@
 package br.com.training.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -26,15 +25,6 @@ public class Treinamento extends GenericDomain {
 	
 	@ManyToOne
 	private OrdemTreino ordem;
-	
-	@Column
-	private String serie;
-	
-	@Column
-	private Double repetiaco;
-	
-	@Column
-	private Double carga;
 
 	public Exercicio getExercicio() {
 		return exercicio;
@@ -66,29 +56,5 @@ public class Treinamento extends GenericDomain {
 
 	public void setOrdem(OrdemTreino ordem) {
 		this.ordem = ordem;
-	}
-
-	public String getSerie() {
-		return serie;
-	}
-
-	public void setSerie(String serie) {
-		this.serie = serie;
-	}
-
-	public Double getRepetiaco() {
-		return repetiaco;
-	}
-
-	public void setRepetiaco(Double repetiaco) {
-		this.repetiaco = repetiaco;
-	}
-
-	public Double getCarga() {
-		return carga;
-	}
-
-	public void setCarga(Double carga) {
-		this.carga = carga;
 	}
 }

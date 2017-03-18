@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.training.model.Treinamento;
-
-public class TreinamentoDAO extends GenericDAO<Treinamento>{
-
-}

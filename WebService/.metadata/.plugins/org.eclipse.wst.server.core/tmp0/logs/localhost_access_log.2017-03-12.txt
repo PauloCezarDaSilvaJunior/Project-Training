@@ -35,3 +35,9 @@
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:38 -0300] "GET /Training/rest/usuario/1 HTTP/1.1" 200 204
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:43 -0300] "GET /Training/rest/usuario/2 HTTP/1.1" 200 4
 0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:20:46 -0300] "GET /Training/rest/usuario/1 HTTP/1.1" 200 204
+127.0.0.1 - - [12/Mar/2017:16:27:46 -0300] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:27:53 -0300] "GET /Training/rest/estado HTTP/1.1" 200 1256
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:27:59 -0300] "GET /Training/rest/cidade HTTP/1.1" 200 875337
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:28:03 -0300] "GET /Training/rest/cidade/1 HTTP/1.1" 200 1693
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:28:08 -0300] "GET /Training/rest/cidade/26 HTTP/1.1" 200 86826
+0:0:0:0:0:0:0:1 - - [12/Mar/2017:16:28:17 -0300] "GET /Training/rest/cidade/24 HTTP/1.1" 200 40372

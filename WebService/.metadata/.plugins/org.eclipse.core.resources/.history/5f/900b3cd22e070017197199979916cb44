@@ -1,7 +1,0 @@
-package br.com.trainig.dao;
-
-import br.com.trainig.model.Estado;
-
-public class EstadoDAO extends GenericDAO<Estado>{ 
-
-}
