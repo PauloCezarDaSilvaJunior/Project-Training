@@ -9,14 +9,12 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="javax.persistence.InheritanceType"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.Usuario"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.Musculo"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.Aluno"/>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.GenericDomain"/>
 <fullyQualifiedTypeName name="java.lang.reflect.ParameterizedType"/>
 <fullyQualifiedTypeName name="br.com.trainig.model.Cidade"/>
@@ -40,4 +38,12 @@
 <fullyQualifiedTypeName name="javax.persistence.criteria.Order"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.hibernate.criterion.Order"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="br.com.training.model.Treinamento"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="br.com.training.dao.GenericDAO"/>
+<fullyQualifiedTypeName name="br.com.training.model.Serie"/>
+<fullyQualifiedTypeName name="br.com.training.dao.AlunoDAO"/>
+<fullyQualifiedTypeName name="br.com.training.model.Aluno"/>
 </qualifiedTypeNameHistroy>

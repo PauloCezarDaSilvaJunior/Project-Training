@@ -1,5 +1,0 @@
-package br.com.training.util;
-
-public class ResourceConfig extends org.glassfish.jersey.server.ResourceConfig{
-
-}

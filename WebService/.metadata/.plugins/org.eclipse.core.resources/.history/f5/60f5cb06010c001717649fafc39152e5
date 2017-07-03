@@ -1,5 +1,0 @@
-package br.com.training.dao;
-
-public class SerieDAO extends GenericDAO<Serie>{
-
-}

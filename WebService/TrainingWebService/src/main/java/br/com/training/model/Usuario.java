@@ -60,4 +60,10 @@ public class Usuario extends GenericDomain{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+	public Cidade getCidade() {
+		return cidade;
+	}
+	public void setCidade(Cidade cidade) {
+		this.cidade = cidade;
+	}
 }

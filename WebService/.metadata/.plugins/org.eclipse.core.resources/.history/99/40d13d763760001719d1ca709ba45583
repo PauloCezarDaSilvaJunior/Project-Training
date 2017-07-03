@@ -1,0 +1,64 @@
+package br.com.training.service;
+
+import java.util.List;
+
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import br.com.training.dao.UsuarioDAO;
+import br.com.training.model.Usuario;
+
+@Path("usuario")
+public class UsuarioService {
+	@GET
+	public String listar(){
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		List<Usuario> usuarios = usuarioDAO.listar("nome");
+
+		Gson gson = new Gson();
+		String json = gson.toJson(usuarios);
+
+		return json;
+	}
+	
+	@GET
+	@Path("{codigo}")
+	public String findById(@PathParam("codigo") Long codigo){
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		Usuario usuario = usuarioDAO.findById(codigo);
+
+		Gson gson = new Gson();
+		String json = gson.toJson(usuario);
+
+		return json;
+	}
+	
+	@POST
+	public String salvar(String json){
+		Gson gson = new GsonBuilder()
+				.setDateFormat("dd/MM/yyyy").create();
+		Usuario usuario = gson.fromJson(json, Usuario.class);
+		
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		usuarioDAO.merge(usuario);
+		
+		String jsonSaida = gson.toJson(usuario);
+		return jsonSaida;
+	}
+	
+	@DELETE
+	public void delete(String json){
+		Gson gson = new GsonBuilder()
+				.setDateFormat("dd/MM/yyyy").create();
+		Usuario usuario = gson.fromJson(json, Usuario.class);
+		
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		usuarioDAO.delete(usuario);
+	}
+}

@@ -2,6 +2,7 @@ package br.com.training.service;
 
 import java.util.List;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -39,11 +40,25 @@ public class AlunoService {
 	}
 	
 	@POST
-	public void salvar(String json){
-		Gson gson = new GsonBuilder().create();
+	public String salvar(String json){
+		Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
 		Aluno aluno = gson.fromJson(json, Aluno.class);
 		
 		AlunoDAO alunoDAO = new AlunoDAO();
 		alunoDAO.merge(aluno);
+		
+		return gson.toJson(aluno);
+	}
+	
+	@DELETE
+	public String delete(String json){
+		Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
+		Aluno aluno = gson.fromJson(json, Aluno.class);
+		
+		AlunoDAO alunoDAO = new AlunoDAO();
+		aluno = alunoDAO.findById(aluno.getCodigo());
+		alunoDAO.delete(aluno);
+		
+		return gson.toJson(aluno);
 	}
 }

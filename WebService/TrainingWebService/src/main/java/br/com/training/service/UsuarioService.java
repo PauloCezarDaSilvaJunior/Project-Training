@@ -3,18 +3,17 @@ package br.com.training.service;
 import java.util.List;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import br.com.training.dao.UsuarioDAO;
 import br.com.training.model.Usuario;
 
 @Path("usuario")
 public class UsuarioService {
+	//Salvar e deletar atravez do AlunoService ou do ProfessorService
 	@GET
 	public String listar(){
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
@@ -36,15 +35,5 @@ public class UsuarioService {
 		String json = gson.toJson(usuario);
 
 		return json;
-	}
-	
-	@POST
-	public void salvar(String json){
-		Gson gson = new GsonBuilder()
-				.setDateFormat("dd/MM/yyyy").create();
-		Usuario usuario = gson.fromJson(json, Usuario.class);
-		
-		UsuarioDAO usuarioDAO = new UsuarioDAO();
-		usuarioDAO.merge(usuario);
 	}
 }

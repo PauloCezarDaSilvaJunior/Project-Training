@@ -1,8 +1,0 @@
-package br.com.training.service;
-
-import javax.ws.rs.Path;
-
-@Path("aluno")
-public class AlunoService {
-
-}
