@@ -3,16 +3,20 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 	<!-- Nome da Aplicação -->
-	<display-name>Farmacia</display-name>
-	<!-- Localização do faces config -->
-
-	<context-param>
-		<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
-		<param-value>true</param-value>
-	</context-param>
+	<display-name>Training</display-name>
 	
 	<!-- Carregamento do Hibernate -->
 	<listener>
 		<listener-class>br.com.training.util.HibernateContext</listener-class>
 	</listener>
+
+	<filter>
+		<filter-name>jwtFilter</filter-name>
+		<filter-class>br.com.training.filter.JWTFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>jwtFilter</filter-name>
+		<url-pattern>/api/*</url-pattern>
+	</filter-mapping>
 </web-app>
