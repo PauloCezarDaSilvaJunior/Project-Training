@@ -21,8 +21,7 @@ public class LoginService {
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 		if(usuarioDAO.logar(usuario)){
 	        String token = JWTUtil.create(usuario.getEmail());
-	        usuario.setToken(token);
-	        return Response.ok().entity(usuario).build();
+	        return Response.ok().header("Authentication", token).build();
 		}else{
 			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}

@@ -28,7 +28,7 @@ public class JWTFilter implements Filter{
 	    HttpServletRequest req = (HttpServletRequest) servletRequest;
 	    HttpServletResponse res = (HttpServletResponse) servletResponse;
 
-	    if(req.getRequestURI().contains("/api/login")){
+	    if(req.getRequestURI().contains("/api/login") || req.getRequestURI().contains("/api/login")){
 	        filterChain.doFilter(servletRequest, servletResponse);
 	        return;
 	    }

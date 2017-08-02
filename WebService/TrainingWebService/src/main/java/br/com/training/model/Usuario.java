@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -29,16 +28,12 @@ public class Usuario extends GenericDomain{
 	@Temporal(TemporalType.DATE)
 	private Date dtNascimento;
 	
-	@Column(length=32, nullable = false)
+	@Column(length=100, nullable = false)
 	private String senha;
 	
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private Cidade cidade;
-	
-	@Transient
-	private String Token;
-
 	
 	public String getNome() {
 		return nome;
@@ -69,11 +64,5 @@ public class Usuario extends GenericDomain{
 	}
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
-	}
-	public String getToken() {
-		return Token;
-	}
-	public void setToken(String token) {
-		Token = token;
 	}
 }

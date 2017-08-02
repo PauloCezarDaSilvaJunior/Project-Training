@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
@@ -37,17 +36,6 @@ public class AlunoService {
 		String json = gson.toJson(aluno);
 
 		return json;
-	}
-	
-	@POST
-	public String salvar(String json){
-		Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
-		Aluno aluno = gson.fromJson(json, Aluno.class);
-		
-		AlunoDAO alunoDAO = new AlunoDAO();
-		alunoDAO.merge(aluno);
-		
-		return gson.toJson(aluno);
 	}
 	
 	@DELETE
