@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
@@ -34,6 +36,10 @@ public class Usuario extends GenericDomain{
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private Cidade cidade;
+	
+	@Column(nullable = false)
+	@Enumerated(EnumType.STRING)
+	private TipoUsuario tipoUsuario;
 	
 	public String getNome() {
 		return nome;

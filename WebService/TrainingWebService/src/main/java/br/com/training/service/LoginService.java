@@ -19,9 +19,10 @@ public class LoginService {
 		Usuario usuario = gson.fromJson(json, Usuario.class);
 		
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
+		Usuario usuarioRetorno = usuarioDAO.logar(usuario);
 		
-		if(usuarioDAO.logar(usuario)){
-			String jsonResposta = gson.toJson(usuario);
+		if(usuarioRetorno != null){
+			String jsonResposta = gson.toJson(usuarioRetorno);
 	        String token = JWTUtil.create(usuario.getEmail());
 	        return Response.ok().header("Authentication", token).entity(jsonResposta).type("aplication/json").build();
 		}else{
