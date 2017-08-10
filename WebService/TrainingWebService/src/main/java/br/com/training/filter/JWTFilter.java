@@ -28,7 +28,7 @@ public class JWTFilter implements Filter{
 	    HttpServletRequest req = (HttpServletRequest) servletRequest;
 	    HttpServletResponse res = (HttpServletResponse) servletResponse;
 
-	    if(req.getRequestURI().contains("/api/login") || req.getRequestURI().contains("/api/aluno")  || req.getRequestURI().contains("/api/professor")){
+	    if(!precisaDeAutenticacao(req)){
 	        filterChain.doFilter(servletRequest, servletResponse);
 	        return;
 	    }
@@ -48,6 +48,17 @@ public class JWTFilter implements Filter{
 	        res.setStatus(401);
 	    }
 		
+	}
+	
+	private boolean precisaDeAutenticacao(HttpServletRequest request){
+		if(request.getRequestURI().contains("/api/login")){
+			return false;
+		}else if(request.getRequestURI().contains("/api/cadastroAluno")){
+			return false;
+		}else if(request.getRequestURI().contains("/api/cadastroProfessor")){
+			return false;
+		}
+		return true;
 	}
 
 	@Override

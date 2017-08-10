@@ -34,7 +34,7 @@ public class Usuario extends GenericDomain{
 	private String senha;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Cidade cidade;
 	
 	@Column(nullable = false)
@@ -71,4 +71,11 @@ public class Usuario extends GenericDomain{
 	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
+	public TipoUsuario getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(TipoUsuario tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	
 }
