@@ -26,11 +26,11 @@ public class Exercicio extends GenericDomain{
 	private Musculo musculoPrincipal;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Musculo musculoSinergistal;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Equipamento equipamento;
 
 	public String getNome() {
