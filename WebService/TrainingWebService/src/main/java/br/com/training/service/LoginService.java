@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 
 import br.com.training.dao.UsuarioDAO;
 import br.com.training.model.Usuario;
@@ -22,9 +23,11 @@ public class LoginService {
 		Usuario usuarioRetorno = usuarioDAO.logar(usuario);
 		
 		if(usuarioRetorno != null){
-			String jsonResposta = gson.toJson(usuarioRetorno);
 	        String token = JWTUtil.create(usuario.getEmail());
-	        return Response.ok().header("Authentication", token).entity(jsonResposta).type("aplication/json").build();
+	        JsonElement jsonElement = gson.toJsonTree(usuarioRetorno);
+	        jsonElement.getAsJsonObject().addProperty("Authentication", token);
+	        String jsonRetorno = gson.toJson(jsonElement);
+	        return Response.ok().header("Authentication", token).entity(jsonRetorno).type("aplication/json").build();
 		}else{
 			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}

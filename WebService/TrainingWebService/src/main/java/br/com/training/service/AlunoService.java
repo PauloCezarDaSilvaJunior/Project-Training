@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
@@ -42,18 +42,18 @@ public class AlunoService {
 	
 	@DELETE
 	public Response delete(String json){
-		Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		Aluno aluno = gson.fromJson(json, Aluno.class);
 		
 		AlunoDAO alunoDAO = new AlunoDAO();
 		aluno = alunoDAO.findById(aluno.getCodigo());
 		alunoDAO.delete(aluno);
 		
-		return Response.ok().entity(gson.toJson(aluno)).type("aplication/json").build();
+		return Response.ok().entity(gson.toJson(aluno)).type("application/json").build();
 	}
 	
-	@PUT
-	public Response update(String json){
+	@POST
+	public Response inserir(String json){
 		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		Aluno aluno = gson.fromJson(json, Aluno.class);
 		

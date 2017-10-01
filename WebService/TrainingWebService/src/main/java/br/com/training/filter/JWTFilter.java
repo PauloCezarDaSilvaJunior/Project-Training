@@ -28,7 +28,7 @@ public class JWTFilter implements Filter{
 	    HttpServletRequest req = (HttpServletRequest) servletRequest;
 	    HttpServletResponse res = (HttpServletResponse) servletResponse;
 
-	    if(!precisaDeAutenticacao(req)){
+	    if(!precisaDeAutenticacao(req) || req.getMethod().toString().equals("OPTIONS")){
 	        filterChain.doFilter(servletRequest, servletResponse);
 	        return;
 	    }

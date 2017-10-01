@@ -1,4 +1,4 @@
-package br.com.farmacia.util;
+package br.com.trainig.util;
 
 import org.hibernate.Session;
 import org.junit.Test;

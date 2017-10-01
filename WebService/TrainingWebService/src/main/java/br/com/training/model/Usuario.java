@@ -8,8 +8,6 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -32,10 +30,6 @@ public class Usuario extends GenericDomain{
 	
 	@Column(length=100, nullable = false)
 	private String senha;
-	
-	@ManyToOne
-	@JoinColumn(nullable = true)
-	private Cidade cidade;
 	
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
@@ -64,12 +58,6 @@ public class Usuario extends GenericDomain{
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public Cidade getCidade() {
-		return cidade;
-	}
-	public void setCidade(Cidade cidade) {
-		this.cidade = cidade;
 	}
 	public TipoUsuario getTipoUsuario() {
 		return tipoUsuario;

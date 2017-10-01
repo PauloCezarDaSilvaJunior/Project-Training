@@ -2,6 +2,8 @@ package br.com.training.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
@@ -16,6 +18,9 @@ public class Aluno extends Usuario{
 	private Double peso;
 	@Column
 	private Double altura;
+	@ManyToOne
+	@JoinColumn(nullable = true)
+	private Professor professor;
 	
 	public Double getPeso() {
 		return peso;

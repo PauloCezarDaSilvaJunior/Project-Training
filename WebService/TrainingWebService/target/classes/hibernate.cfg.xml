@@ -29,13 +29,11 @@
 		<property name="show_sql">true</property>
 
 		<!-- Drop and re-create the database schema on startup -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.com.training.model.Aluno" />
-		<mapping class="br.com.training.model.Cidade" />
 		<mapping class="br.com.training.model.Equipamento" />
-		<mapping class="br.com.training.model.Estado" />
 		<mapping class="br.com.training.model.Exercicio" />
 		<mapping class="br.com.training.model.Musculo" />
 		<mapping class="br.com.training.model.OrdemTreino" />
