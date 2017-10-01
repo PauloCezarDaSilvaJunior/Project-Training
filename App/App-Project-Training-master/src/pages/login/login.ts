@@ -17,7 +17,6 @@ export class LoginPage {
   data: any;
 
   constructor(public navCtrl: NavController, private localService: LocalService, public authService: AuthService, private toastCtrl: ToastController) {
-    //this.goToProfessor()
   }
 
   goTocadastroAluno() {
@@ -31,7 +30,7 @@ export class LoginPage {
   goToProfessor() {
     this.navCtrl.setRoot(MenuLateralPage);
   }
-
+  
   doLogin() {
     /*
     let valorForm = form.value
@@ -43,6 +42,8 @@ export class LoginPage {
     this.authService.login(this.loginData).then((result) => {
       this.data = result;
       localStorage.setItem('token', this.data.Authentication);
+      localStorage.setItem('codUsuarioLogado', this.data.codigo);
+      this.goToProfessor();
     }, (err) => {
       if (err.status == 401) {
         this.presentToast("Email ou senha invalidos!");
