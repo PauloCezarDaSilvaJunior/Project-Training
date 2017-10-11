@@ -9,9 +9,9 @@
 		
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/academia</property>
-		<property name="connection.username">root</property>
-		<property name="connection.password"></property>
+		<property name="connection.url">jdbc:mysql://training.ctkbpyrqxfvr.us-east-2.rds.amazonaws.com:3306/academia</property>
+		<property name="connection.username">academia</property>
+		<property name="connection.password">academia</property>
 		
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
@@ -29,17 +29,17 @@
 		<property name="show_sql">true</property>
 
 		<!-- Drop and re-create the database schema on startup -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.com.training.model.Aluno" />
-		<mapping class="br.com.training.model.Equipamento" />
 		<mapping class="br.com.training.model.Exercicio" />
 		<mapping class="br.com.training.model.Musculo" />
 		<mapping class="br.com.training.model.OrdemTreino" />
 		<mapping class="br.com.training.model.Professor" />
 		<mapping class="br.com.training.model.Treinamento" />
 		<mapping class="br.com.training.model.Usuario" />
+		<mapping class="br.com.training.model.Serie" />
 
 	</session-factory>
 

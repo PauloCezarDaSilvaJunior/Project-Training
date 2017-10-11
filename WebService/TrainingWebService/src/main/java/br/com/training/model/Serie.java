@@ -1,12 +1,14 @@
 package br.com.training.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-public class Serie implements Serializable{
+@Entity
+@Table(name = "serie")
+public class Serie extends Usuario{
 	
 	private static final long serialVersionUID = 1L;
 

@@ -22,7 +22,7 @@ public class Usuario extends GenericDomain{
 	@Column(length=70, nullable = false)
 	private String nome;
 	
-	@Column(length=70, nullable = false)
+	@Column(length=70, nullable = false, unique = true)
 	private String email;
 	
 	@Temporal(TemporalType.DATE)

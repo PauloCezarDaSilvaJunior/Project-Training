@@ -1,6 +1,1 @@
-br\com\farmacia\dao\FabricanteDAOTeste.class
-br\com\farmacia\dao\UsuarioDAOTest.class
-br\com\farmacia\dao\EstadoDAOTeste.class
-br\com\farmacia\dao\ItemVendaDAOTeste.class
-br\com\farmacia\dao\CidadeDAOTest.class
-br\com\farmacia\util\HibernateUtilTeste.class
+br\com\trainig\util\HibernateUtilTeste.class

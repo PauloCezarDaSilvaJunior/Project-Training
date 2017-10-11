@@ -1,5 +1,6 @@
 package br.com.training.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -10,10 +11,9 @@ import javax.persistence.Table;
 public class Treinamento extends GenericDomain {
 
 	private static final long serialVersionUID = 1L;
-
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	private Exercicio exercicio;
+	
+	@Column(length = 100, nullable = false)
+	private String nome;
 	
 	@ManyToOne
 	@JoinColumn(nullable = false)
@@ -24,15 +24,7 @@ public class Treinamento extends GenericDomain {
 	private Professor professor;
 	
 	@ManyToOne
-	private OrdemTreino ordem;
-
-	public Exercicio getExercicio() {
-		return exercicio;
-	}
-
-	public void setExercicio(Exercicio exercicio) {
-		this.exercicio = exercicio;
-	}
+	private OrdemTreino ordemTreino;
 
 	public Aluno getAluno() {
 		return aluno;
@@ -50,11 +42,19 @@ public class Treinamento extends GenericDomain {
 		this.professor = professor;
 	}
 
-	public OrdemTreino getOrdem() {
-		return ordem;
+	public OrdemTreino getOrdemTreino() {
+		return ordemTreino;
 	}
 
-	public void setOrdem(OrdemTreino ordem) {
-		this.ordem = ordem;
+	public void setOrdemTreino(OrdemTreino ordem) {
+		this.ordemTreino = ordem;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }

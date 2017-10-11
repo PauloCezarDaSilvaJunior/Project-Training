@@ -22,17 +22,9 @@ public class Exercicio extends GenericDomain{
 	private String linkVideo;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(nullable = true)
 	private Musculo musculoPrincipal;
 	
-	@ManyToOne
-	@JoinColumn(nullable = true)
-	private Musculo musculoSinergistal;
-	
-	@ManyToOne
-	@JoinColumn(nullable = true)
-	private Equipamento equipamento;
-
 	public String getNome() {
 		return nome;
 	}
@@ -63,21 +55,5 @@ public class Exercicio extends GenericDomain{
 
 	public void setMusculoPrincipal(Musculo musculoPrincipal) {
 		this.musculoPrincipal = musculoPrincipal;
-	}
-
-	public Musculo getMusculoSinergistal() {
-		return musculoSinergistal;
-	}
-
-	public void setMusculoSinergistal(Musculo musculoSinergistal) {
-		this.musculoSinergistal = musculoSinergistal;
-	}
-
-	public Equipamento getEquipamento() {
-		return equipamento;
-	}
-
-	public void setEquipamento(Equipamento equipamento) {
-		this.equipamento = equipamento;
 	}
 }
