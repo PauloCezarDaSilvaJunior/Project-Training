@@ -2,7 +2,6 @@ package br.com.training.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -21,9 +20,14 @@ public class Exercicio extends GenericDomain{
 	@Column(length = 200)
 	private String linkVideo;
 	
+	@Column(length = 400)
+	private String musculo;
+	
+	@Column(length = 400)
+	private String equipamento;
+	
 	@ManyToOne
-	@JoinColumn(nullable = true)
-	private Musculo musculoPrincipal;
+	private Professor professor;
 	
 	public String getNome() {
 		return nome;
@@ -49,11 +53,28 @@ public class Exercicio extends GenericDomain{
 		this.linkVideo = linkVideo;
 	}
 
-	public Musculo getMusculoPrincipal() {
-		return musculoPrincipal;
+	public String getMusculo() {
+		return musculo;
 	}
 
-	public void setMusculoPrincipal(Musculo musculoPrincipal) {
-		this.musculoPrincipal = musculoPrincipal;
+	public void setMusculo(String musculo) {
+		this.musculo = musculo;
 	}
+
+	public String getEquipamento() {
+		return equipamento;
+	}
+
+	public void setEquipamento(String equipamento) {
+		this.equipamento = equipamento;
+	}
+
+	public Professor getProfessor() {
+		return professor;
+	}
+
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+	
 }

@@ -23,9 +23,11 @@ public class OrdemTreino extends GenericDomain{
 	@JoinColumn(nullable = false)
 	private Exercicio exercicio;
 	
-	@ManyToOne
-	@JoinColumn(nullable = false)
-	private Serie serie;
+	@Column(length = 400)
+	private String serie;
+	
+	@Column(length = 400)
+	private String repeticao;
 
 	public String getDescricao() {
 		return descricao;
@@ -50,10 +52,20 @@ public class OrdemTreino extends GenericDomain{
 	public void setTreinamento(Treinamento treinamento) {
 		this.treinamento = treinamento;
 	}
-	public Serie getSerie() {
+
+	public String getSerie() {
 		return serie;
 	}
-	public void setSerie(Serie serie) {
+
+	public void setSerie(String serie) {
 		this.serie = serie;
+	}
+
+	public String getRepeticao() {
+		return repeticao;
+	}
+
+	public void setRepeticao(String repeticao) {
+		this.repeticao = repeticao;
 	}
 }

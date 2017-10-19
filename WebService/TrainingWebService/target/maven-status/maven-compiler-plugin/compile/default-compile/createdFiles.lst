@@ -4,8 +4,6 @@ br\com\training\service\MensagemService.class
 br\com\training\util\JWTUtil.class
 br\com\training\dao\TreinamentoDAO.class
 br\com\training\service\ProfessorService.class
-br\com\training\dao\SerieDAO.class
-br\com\training\model\Serie.class
 br\com\training\model\Exercicio.class
 br\com\training\util\HibernateUtil$1.class
 br\com\training\model\Mensagem.class
@@ -17,7 +15,6 @@ br\com\training\service\AlunoService.class
 br\com\training\service\OrdemTreinoService.class
 br\com\training\model\TipoUsuario.class
 br\com\training\util\HibernateUtil.class
-br\com\training\dao\MusculoDAO.class
 br\com\training\dao\AlunoDAO.class
 br\com\training\model\Treinamento.class
 br\com\training\service\CadastroAlunoService.class
@@ -26,7 +23,6 @@ br\com\training\util\HibernateContext.class
 br\com\training\model\Usuario.class
 br\com\training\service\cadastroProfessorService.class
 br\com\training\service\UsuarioService.class
-br\com\training\model\Musculo.class
 br\com\training\model\OrdemTreino.class
 br\com\training\util\TrainingResourceConfig.class
 br\com\training\dao\UsuarioDAO.class
@@ -34,5 +30,4 @@ br\com\training\filter\JWTFilter.class
 br\com\training\dao\OrdemTreinoDAO.class
 br\com\training\model\Aluno.class
 br\com\training\dao\GenericDAO.class
-br\com\training\service\MusculoService.class
 br\com\training\service\LoginService.class

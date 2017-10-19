@@ -34,12 +34,10 @@
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.com.training.model.Aluno" />
 		<mapping class="br.com.training.model.Exercicio" />
-		<mapping class="br.com.training.model.Musculo" />
 		<mapping class="br.com.training.model.OrdemTreino" />
 		<mapping class="br.com.training.model.Professor" />
 		<mapping class="br.com.training.model.Treinamento" />
 		<mapping class="br.com.training.model.Usuario" />
-		<mapping class="br.com.training.model.Serie" />
 
 	</session-factory>
 
